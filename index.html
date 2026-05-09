@@ -491,7 +491,7 @@ alt="RS UNAIR">
 
 <select id="obat">
 
-    <option value="DILTIAZEM/HERBESSER">
+    <option value="DILTIAZEM">
         Diltiazem (Herbesser)
     </option>
 
@@ -507,7 +507,7 @@ alt="RS UNAIR">
         Dobutamin
     </option>
 
-    <option value="NITROGLICERIN/NTG">
+    <option value="NTG">
         Nitroglicerin (NTG)
     </option>
 
@@ -515,19 +515,19 @@ alt="RS UNAIR">
         Dopamin
     </option>
 
-    <option value="DEXMEDETOMIDINE">
+    <option value="DEX">
         Dexmedetomidine (ICUNES)
     </option>
 
-    <option value="NOREPINEPHRINE">
+    <option value="NE">
         NorEpinephrine (NE)
     </option>
 
-    <option value="EPINEPHRINE">
+    <option value="EPI">
         Epinephrine
     </option>
 
-    <option value="VASOPRESSIN">
+    <option value="VASO">
         Vasopressin
     </option>
 
@@ -959,7 +959,11 @@ tabelRate += `</table>`;
         </div>
 ${tabelRate}
 
-        <div class="alert">
+<div style="display:flex;justify-content:center;margin-top:5px;">
+    <canvas id="${idQR}"></canvas>
+</div>
+
+<div class="alert">
             HIGH ALERT<br>
             DOUBLE CHECK
         </div>
