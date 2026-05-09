@@ -565,6 +565,19 @@ function tambahLabel(){
 
     let obat = document.getElementById('obat').value;
 
+    let namaObat = {
+        DILTIAZEM: "DILTIAZEM",
+        NICARDIPINE_MURNI: "NICARDIPINE",
+        NICARDIPINE_OPLOS: "NICARDIPINE",
+        DOBUTAMIN: "DOBUTAMIN",
+        NTG: "NITROGLICERIN",
+        DOPAMIN: "DOPAMIN",
+        DEX: "DEXMEDETOMIDINE",
+        NE: "NOREPINEPHRINE",
+        EPI: "EPINEPHRINE",
+        VASO: "VASOPRESSIN"
+    }[obat];
+
     if(!nama || !bb){
 
         alert('Lengkapi data pasien');
@@ -921,7 +934,7 @@ tabelRate += `</table>`;
 
     <div class="label-header"
     style="background:${warna}">
-        ${obat}
+        ${namaObat}
     </div>
 
     <div class="label-content">
@@ -958,10 +971,6 @@ tabelRate += `</table>`;
 
         </div>
 ${tabelRate}
-
-<div style="display:flex;justify-content:center;margin-top:5px;">
-    <canvas id="${idQR}"></canvas>
-</div>
 
 <div class="alert">
             HIGH ALERT<br>
