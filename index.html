@@ -591,7 +591,11 @@ function tambahLabel(){
 
 let satuan = "ml/jam";
 
+let labelDosis = "microgram/kgBB/mnt";
+
 let dosisPerMl = "-";
+
+let dosisSediaan = "-";
 
 let r = [];
 
@@ -603,7 +607,9 @@ if(obat === "DILTIAZEM"){
 
     warna = "#fed7aa";
 
-    dosisPerMl = "100 mg / 50 ml";
+    dosisPerMl = "2 mg/ml-PZ/D5-50 ml";
+
+    dosisSediaan = "100 mg";
 
     for(let i=1;i<=10;i++){
 
@@ -623,7 +629,9 @@ if(obat === "NICARDIPINE_MURNI"){
 
     satuan = "mg/jam";
 
-    dosisPerMl = "1 mg / ml";
+    dosisPerMl = "1 mg / ml - MURNI";
+
+    dosisSediaan = "10 mg";
 
     for(let i=0.5;i<=5;i+=0.5){
 
@@ -641,8 +649,10 @@ if(obat === "NICARDIPINE_OPLOS"){
 
     warna = "#fef08a";
 
-    dosisPerMl = "10 mg / 50 ml";
+    dosisPerMl = "0,2 mg/ml-PZ/D5-50 ml";
 
+    dosisSediaan = "10 mg";
+  
     for(let i=0.5;i<=5;i+=0.5){
 
         r.push(
@@ -659,7 +669,9 @@ if(obat === "DOBUTAMIN"){
 
     warna = "#bfdbfe";
 
-    dosisPerMl = "250 mg / 50 ml";
+    dosisPerMl = "5 mg/ml-PZ/D5-50 ml";
+
+    dosisSediaan = "250 mg";
 
     for(let i=1;i<=10;i++){
 
@@ -677,7 +689,9 @@ if(obat === "NTG"){
 
     warna = "#fecaca";
 
-    dosisPerMl = "10 mg / 50 ml";
+    dosisPerMl = "0,5 mg/ml-PZ/D5-50 ml";
+
+    dosisSediaan = "10 mg";
 
     for(let i=10;i<=100;i+=10){
 
@@ -695,7 +709,9 @@ if(obat === "DOPAMIN"){
 
     warna = "#ddd6fe";
 
-    dosisPerMl = "200 mg / 40 ml";
+    dosisPerMl = "5 mg/ml-PZ/D5-40 ml";
+
+    dosisSediaan = "200 mg";
 
     for(let i=1;i<=10;i++){
 
@@ -713,7 +729,9 @@ if(obat === "DEX"){
 
     warna = "#a7f3d0";
 
-    dosisPerMl = "200 mcg / 50 ml";
+    dosisPerMl = "4 mcg/ml-PZ/D5-50 ml";
+
+    dosisSediaan = "200 mcg";
 
     for(let i=0.1;i<=1;i+=0.1){
 
@@ -731,7 +749,11 @@ if(obat === "NE"){
 
     warna = "#fecdd3";
 
-    dosisPerMl = "8 mg / 40 ml";
+    labelDosis = "nanogram/kgBB/mnt";
+
+    dosisPerMl = "0,2 mg/ml-PZ/D5-40 ml";
+
+    dosisSediaan = "8 mg";
 
     let dosisNE = [
         25,50,75,100,125,150,
@@ -754,7 +776,11 @@ if(obat === "EPI"){
 
     warna = "#fda4af";
 
-    dosisPerMl = "8 mg / 40 ml";
+    labelDosis = "nanogram/kgBB/mnt";
+
+    dosisPerMl = "0,2 mg/ml-PZ/D5-40 ml";
+
+    dosisSediaan = "8 mg";
 
     let dosisEPI = [
         25,50,75,100,125,150,
@@ -777,7 +803,11 @@ if(obat === "VASO"){
 
     warna = "#ddd6fe";
 
-    dosisPerMl = "1 unit / ml";
+    labelDosis = "unit/menit";
+  
+    dosisPerMl = "1 unit/ml-PZ/D5-20 ml";
+
+    dosisSediaan = "20 unit";
 
     let dosisVASO = [
         0.01,0.02,0.03,0.04,0.05,
@@ -857,7 +887,12 @@ let tabelRate = `
 <table class="rate-table">
 
 <tr>
-    <th>Dosis</th>
+    <th>DOSIS</th>
+    <th>RATE</th>
+</tr>
+
+<tr>
+    <th>${labelDosis}</th>
     <th>${satuan}</th>
 </tr>
 
@@ -904,17 +939,21 @@ tabelRate += `</table>`;
             <div>
                 ⚖️ ${bb} kg
             </div>
-
-            <div>
-                💉 ${dosisPerMl}
-            </div>
-
+            
             <div>
                 👨‍⚕️ ${perawat}
+            </div>
+            
+            <div>
+                💊 ${dosisSediaan}
             </div>
 
             <div>
                 🕒 ${waktu}
+            </div>
+
+            <div>
+                💉 ${dosisPerMl}
             </div>
 
         </div>
