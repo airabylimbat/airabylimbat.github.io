@@ -87,24 +87,23 @@ body::before{
 }
 
 /* LOGO */
-.logo-rs{
+/* BANNER RS */
+.logo-banner{
 
-    width:90px;
+    width:min(95%,1200px);
 
-    height:90px;
+    max-height:170px;
 
     object-fit:contain;
 
-    margin-bottom:10px;
-
     display:block;
 
-    margin-left:auto;
+    margin:0 auto 15px auto;
 
-    margin-right:auto;
+    border-radius:40px;
 
-    filter:
-    drop-shadow(0 4px 10px rgba(0,0,0,0.3));
+    box-shadow:
+    0 8px 25px rgba(0,0,0,0.25);
 }
     display:flex;
 
@@ -465,10 +464,10 @@ button:hover{
 
 <div class="header-app">
 
-    <img
-    src="logo.png"
-    class="logo-rs"
-    alt="Logo ICU">
+<img
+src="rs-unair-banner-1.png"
+class="logo-banner"
+alt="RS UNAIR">
 
     <h1>AIRA by Limbat</h1>
 
@@ -927,6 +926,8 @@ ${tabelRate}
         </div>
 
     </div>
+
+</div>
 
     `;
 
