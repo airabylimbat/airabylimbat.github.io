@@ -150,7 +150,46 @@ body::before{
 
     opacity:0.9;
 }
+.title-aira{
 
+    margin:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    line-height:1;
+
+    font-weight:800;
+
+    letter-spacing:3px;
+
+    animation:pulse 1.5s infinite;
+}
+
+.title-aira{
+
+    font-size:48px;
+
+    color:white;
+}
+
+.title-aira span{
+
+    margin-top:6px;
+
+    font-size:16px;
+
+    font-weight:500;
+
+    letter-spacing:4px;
+
+    color:#d1fae5;
+
+    text-transform:uppercase;
+}
 /* ANIMASI */
 @keyframes pulse{
 
@@ -469,7 +508,10 @@ src="rs-unair-banner-1.png"
 class="logo-banner"
 alt="RS UNAIR">
 
-    <h1>AIRA by Limbat</h1>
+    <h1 class="title-aira">
+    AIRA
+    <span>by Limbat</span>
+</h1>
 
     <p>
     Airlangga Intelligent Rapid Assistant • Precision in High Alert Medication Calculator
@@ -487,7 +529,9 @@ alt="RS UNAIR">
 
 <input type="number" id="bb" placeholder="Berat badan (kg)">
 
-<input type="text" id="perawat" placeholder="Nama perawat">
+<input type="text" id="giver" placeholder="Nama Giver">
+
+<input type="text" id="checker" placeholder="Nama Checker">
 
 <select id="obat">
 
@@ -561,7 +605,9 @@ function tambahLabel(){
 
     let bb = parseFloat(document.getElementById('bb').value);
 
-    let perawat = document.getElementById('perawat').value;
+    let giver = document.getElementById('giver').value;
+
+    let checker = document.getElementById('checker').value;
 
     let obat = document.getElementById('obat').value;
 
@@ -954,7 +1000,11 @@ tabelRate += `</table>`;
             </div>
             
             <div>
-                👨‍⚕️ ${perawat}
+                👨‍⚕️ Giver : ${giver}
+            </div>
+
+            <div>
+                ✅ Checker : ${checker}
             </div>
             
             <div>
