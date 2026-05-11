@@ -344,10 +344,6 @@ button:hover{
     border:2px solid #111827;
 
     page-break-inside:avoid;
-
-    padding:0;
-
-    position:relative;
 }
 
 /* HEADER LABEL */
@@ -369,15 +365,13 @@ button:hover{
 
     padding:4px 5px;
 
-    font-size:9px;
-
-    flex:1;
-
     display:flex;
 
     flex-direction:column;
 
     gap:4px;
+
+    height:100%;
 }
 
 .label-content table{
@@ -421,11 +415,9 @@ button:hover{
 
     border-collapse:collapse;
 
-    margin-top:4px;
-
     font-size:7px;
 
-    flex:1;
+    margin-top:2px;
 }
 
 .rate-table th,
@@ -451,7 +443,7 @@ button:hover{
 /* ALERT */
 .alert{
 
-    margin-top:6px;
+    margin-top:auto;
 
     border:2px solid red;
 
@@ -976,6 +968,8 @@ tabelRate += `</table>`;
 
     let html = `
 
+let html = `
+
 <div class="label">
 
     <div class="label-header"
@@ -985,46 +979,25 @@ tabelRate += `</table>`;
 
     <div class="label-content">
 
-<div class="info-grid">
+        <div class="info-grid">
 
-    <div>
-        👤 ${nama}
-    </div>
+            <div>👤 ${nama}</div>
+            <div>🆔 ${mr}</div>
 
-    <div>
-        🆔 ${mr}
-    </div>
+            <div>⚖️ ${bb} kg</div>
+            <div>👨‍⚕️ Giver : ${giver}</div>
 
-    <div>
-        ⚖️ ${bb} kg
-    </div>
+            <div>💊 ${dosisSediaan}</div>
+            <div>✅ Checker : ${checker}</div>
 
-    <div>
-        👨‍⚕️ Giver : ${giver}
-    </div>
+            <div>💧 ${dosisPerMl}</div>
+            <div>🕒 ${waktu}</div>
 
-    <div>
-        💊 ${dosisSediaan}
-    </div>
+        </div>
 
-    <div>
-        ✅ Checker : ${checker}
-    </div>
+        ${tabelRate}
 
-    <div>
-        💧 ${dosisPerMl}
-    </div>
-
-    <div>
-        🕒 ${waktu}
-    </div>
-
-</div>
-
-</div>
-${tabelRate}
-
-<div class="alert">
+        <div class="alert">
             HIGH ALERT<br>
             DOUBLE CHECK
         </div>
@@ -1033,7 +1006,7 @@ ${tabelRate}
 
 </div>
 
-    `;
+`;
 
     document.getElementById('sheet').innerHTML += html;
 
