@@ -1008,8 +1008,6 @@ tabelRate += `</table>`;
 
         ${tabelRate}
 
-        <canvas id="${idQR}"></canvas>
-
         <div class="alert">
             HIGH ALERT<br>
             DOUBLE CHECK
@@ -1023,13 +1021,6 @@ tabelRate += `</table>`;
 
     document.getElementById('sheet').innerHTML += html;
 
-    QRCode.toCanvas(
-        document.getElementById(idQR),
-        nama + " | " + obat + " | " + mr,
-        {
-            width:50
-        }
-    );
 }
 
 function clearLabel(){
