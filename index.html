@@ -54,36 +54,111 @@ body::before{
     pointer-events:none;
 }
 
-/* HEADER */
-/* HEADER */
+/* =========================
+   HEADER ICU STYLE
+========================= */
+
 .header-app{
 
-    display:flex;
+    margin-bottom:20px;
+}
 
-    flex-direction:column;
+.header-top{
+
+    display:grid;
+
+    grid-template-columns:
+    1fr 1fr 1fr;
+
+    align-items:center;
+
+    gap:20px;
+}
+
+/* BOX LOGO */
+
+.header-logo-box{
+
+    background:transparent;
+
+    border-radius:0;
+
+    padding:0;
+
+    display:flex;
 
     align-items:center;
 
     justify-content:center;
 
+    box-shadow:none;
+}
+
+.header-logo{
+
+    width:100%;
+
+    max-height:120px;
+
+    object-fit:contain;
+
+    display:block;
+}
+
+/* TENGAH */
+
+.header-center{
+
     text-align:center;
 
-    background:rgba(255,255,255,0.12);
-
-    backdrop-filter:blur(12px);
-
-    border:1px solid rgba(255,255,255,0.2);
-
-    border-radius:25px;
-
-    padding:20px;
-
     color:white;
+}
 
-    margin-bottom:25px;
+.aira-title{
 
-    box-shadow:
-    0 10px 30px rgba(0,0,0,0.25);
+    margin:0;
+
+    font-size:72px;
+
+    line-height:0.9;
+
+    letter-spacing:4px;
+
+    font-weight:900;
+
+    text-shadow:
+    0 5px 15px rgba(0,0,0,0.3);
+}
+
+.aira-sub{
+
+    font-size:20px;
+
+    letter-spacing:8px;
+
+    margin-top:5px;
+
+    color:#d1fae5;
+
+    font-weight:600;
+}
+
+.aira-desc{
+
+    margin-top:10px;
+
+    font-size:20px;
+
+    font-weight:600;
+}
+
+.aira-desc-small{
+
+    font-size:15px;
+
+    margin-top:5px;
+
+    color:#f8fafc;
 }
 
 /* LOGO */
@@ -197,6 +272,374 @@ body::before{
 
     margin-bottom:30px;
 }
+.main-stack{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:14px;
+}
+/* =========================
+   ICU PANEL LAYOUT
+========================= */
+
+.top-panel{
+
+    display:grid;
+
+    grid-template-columns:1.4fr 1fr;
+
+    gap:18px;
+
+    margin-bottom:20px;
+}
+
+/* =========================
+   NEW ICU LAYOUT
+========================= */
+
+.top-layout{
+
+    display:grid;
+
+    grid-template-columns:
+    1.2fr 1fr;
+
+    gap:16px;
+
+    align-items:start;
+}
+
+.left-panel,
+.right-panel{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:14px;
+}
+
+/* GRID */
+
+.form-grid-3{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:12px;
+}
+
+.form-grid-2{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:12px;
+}
+
+.panel-card{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:16px;
+
+    box-shadow:
+    0 4px 12px rgba(0,0,0,0.08);
+
+    border:1px solid #dbeafe;
+}
+
+.panel-title{
+
+    margin-top:0;
+
+    margin-bottom:14px;
+
+    font-size:20px;
+
+    color:#0f766e;
+
+    font-weight:900;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    letter-spacing:0.5px;
+}
+/* =========================
+   ICU SECTION
+========================= */
+
+.section-box{
+
+    background:#f8fafc;
+
+    border-radius:16px;
+
+    padding:14px;
+
+    margin-bottom:15px;
+
+    border:1px solid #dbeafe;
+}
+
+.section-mini-title{
+
+    font-size:14px;
+
+    font-weight:800;
+
+    color:#0f766e;
+
+    margin-bottom:12px;
+
+    letter-spacing:0.5px;
+
+    text-transform:uppercase;
+}
+/* BUTTON AREA */
+.full-button-bar{
+
+    width:100%;
+
+    display:block;
+
+    margin-top:18px;
+
+    margin-bottom:20px;
+}
+
+.button-group{
+
+    width:100%;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,minmax(0,1fr));
+
+    gap:14px;
+
+    align-items:stretch;
+}
+
+.button-group button{
+
+    width:100%;
+}
+
+/* LABEL CONTAINER */
+
+.output-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:2mm;
+
+    padding-top:6px;
+
+    background:transparent !important;
+}
+
+/* BOX SECTION */
+
+.output-box{
+
+    background:transparent !important;
+
+    border:none !important;
+
+    border-radius:0 !important;
+
+    padding:0 !important;
+
+    margin:0 !important;
+
+    box-shadow:none !important;
+}
+
+.output-title{
+    display:none !important;
+}
+
+/* LABEL SPUIT */
+
+.spuit-sheet{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit, 58mm);
+
+    gap:8px;
+}
+
+.spuit-label{
+
+    width:58mm;
+
+    height:30mm;
+
+    background:white;
+
+    border:2px solid #111827;
+
+    border-radius:10px;
+
+    padding:2mm;
+
+    position:relative;
+
+    overflow:hidden;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+
+    page-break-inside:avoid;
+}
+
+.spuit-title{
+
+    font-size:12px;
+
+    font-weight:900;
+
+    text-align:center;
+
+    margin-bottom:2px;
+
+    color:#111827;
+
+    letter-spacing:1px;
+}
+/* =========================
+   SPUIT INFO GRID
+========================= */
+
+.spuit-info-grid{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:2px;
+
+    flex:1;
+
+    align-content:start;
+}
+
+.spuit-info-item{
+
+    border-radius:6px;
+
+    padding:2px 4px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:3px;
+
+    font-size:6.8px;
+
+    font-weight:700;
+
+    min-height:18px;
+
+    overflow:hidden;
+}
+
+.spuit-info-icon{
+
+    flex-shrink:0;
+
+    font-size:7px;
+}
+
+.spuit-info-text{
+
+    white-space:nowrap;
+
+    overflow:hidden;
+
+    text-overflow:ellipsis;
+}
+/* WARNA IDENTITAS */
+
+.info-patient{
+    background:#eff6ff;
+}
+
+.info-rm{
+    background:#eef2ff;
+}
+
+.info-bb{
+    background:#ecfccb;
+}
+
+.info-giver{
+    background:#fff7ed;
+}
+
+.info-obat{
+    background:#fee2e2;
+}
+
+.info-checker{
+    background:#dcfce7;
+}
+
+.info-pelarut{
+    background:#ecfeff;
+}
+
+.info-time{
+    background:#f3f4f6;
+}
+
+.high-alert{
+
+    position:absolute;
+
+    top:0;
+
+    right:0;
+
+    background:#dc2626;
+
+    color:white;
+
+    font-size:6px;
+
+    font-weight:900;
+
+    padding:2px 6px;
+
+    border-bottom-left-radius:8px;
+
+    letter-spacing:0.5px;
+
+    box-shadow:
+    0 2px 6px rgba(220,38,38,0.3);
+}
 
 .form-grid{
 
@@ -213,34 +656,75 @@ select{
 
     width:100%;
 
-    padding:14px;
+    height:52px;
+
+    padding:10px 14px;
 
     border:none;
 
-    border-radius:15px;
+    border-radius:12px;
 
     font-size:15px;
 
-    background:rgba(255,255,255,0.92);
+    font-weight:600;
+
+    background:#eef2ff;
+
+    color:#111827;
+
+    box-shadow:
+    inset 0 1px 2px rgba(0,0,0,0.05);
+}
+
+/* INPUT AUTO FILL */
+
+input[readonly]{
+
+    background:#e8f5e9;
+
+    color:#166534;
+
+    font-weight:800;
+
+    border:2px solid #bbf7d0;
 }
 
 button{
 
-    padding:15px;
+    width:100%;
 
-    border:none;
+    height:64px;
 
-    border-radius:18px;
+    border:3px solid rgba(255,255,255,0.9);
 
-    font-size:16px;
+    border-radius:16px;
 
-    font-weight:bold;
+    font-size:15px;
+
+    font-weight:800;
 
     cursor:pointer;
 
-    transition:0.3s;
-}
+    transition:0.25s;
 
+    letter-spacing:0.3px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    box-shadow:
+    0 4px 10px rgba(0,0,0,0.15);
+}
+button:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:
+    0 8px 18px rgba(0,0,0,0.22);
+}
 .btn-add{
 
     background:
@@ -316,7 +800,13 @@ button:hover{
 
     border:2px solid #111827;
 
+    break-inside:avoid;
+
     page-break-inside:avoid;
+
+    flex:0 0 5cm;
+
+    margin:0;
 }
 
 /* HEADER LABEL */
@@ -438,70 +928,148 @@ button:hover{
 }
 
 /* PRINT */
-@media print{
-
-    body{
-
-        background:white;
-
-        padding:0;
-    }
-
-    .header-app,
-    .form-box{
-
-        display:none;
-    }
-
-    .sheet{
-
-        gap:4mm;
-    }
-
-    .label{
-
-        box-shadow:none;
-    }
-}
 @page{
     size:A4 portrait;
-    margin:5mm;
+    margin:8mm;
 }
 
 @media print{
 
     *{
-        -webkit-print-color-adjust: exact !important;
-        print-color-adjust: exact !important;
+        -webkit-print-color-adjust:exact !important;
+        print-color-adjust:exact !important;
     }
 
-    html, body{
+    html,
+    body{
+
         width:100%;
         height:auto;
+
         background:white !important;
-    }
 
-    body{
-        padding:0;
         margin:0;
+        padding:0;
     }
 
-    .header-app,
-    .form-box{
+    /* SEMBUNYIKAN FORM */
+
+.header-app,
+.full-button-bar,
+.panel-card,
+.copyright,
+.output-title{
+
         display:none !important;
     }
 
-    .sheet{
-        gap:3mm;
+    /* SATUKAN SEMUA LABEL */
+
+    .output-grid{
+
+        display:block !important;
     }
 
-    .label{
+    .output-box{
+
         box-shadow:none !important;
-        break-inside:avoid;
-        page-break-inside:avoid;
+        border:none !important;
+        padding:0 !important;
+        margin:0 !important;
+
+        background:white !important;
     }
-    .copyright{
-        display:none;
+
+    /* GRID LABEL TITRASI */
+
+.sheet{
+
+    width:100%;
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:2mm;
+
+    align-items:flex-start;
+
+    align-content:flex-start;
+}
+
+    /* GRID LABEL SPUIT */
+
+  .spuit-sheet{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fill,58mm);
+
+    gap:2mm;
+
+    justify-content:start;
+
+    align-content:start;
+
+    margin-top:2mm;
+}
+
+    /* LABEL */
+
+.label,
+.spuit-label{
+
+    box-shadow:none !important;
+
+    border-radius:0 !important;
+
+    break-inside:avoid;
+
+    page-break-inside:avoid;
+
+    position:relative;
+}
+
+    /* GARIS POTONG */
+
+    .label::before,
+    .label::after,
+    .spuit-label::before,
+    .spuit-label::after{
+
+        content:"";
+
+        position:absolute;
+
+        border-color:#9ca3af;
+        border-style:dashed;
+
+        pointer-events:none;
+    }
+
+    /* HORIZONTAL CUT */
+
+    .label::before,
+    .spuit-label::before{
+
+        left:-3mm;
+        right:-3mm;
+        top:-3mm;
+
+        border-top-width:1px;
+    }
+
+    /* VERTICAL CUT */
+
+    .label::after,
+    .spuit-label::after{
+
+        top:-3mm;
+        bottom:-3mm;
+        left:-3mm;
+
+        border-left-width:1px;
     }
 }
 
@@ -531,119 +1099,510 @@ button:hover{
     text-shadow:
     0 2px 10px rgba(0,0,0,0.4);
 }  
+/* HAPUS SEMUA BAYANGAN CETAK */
+
+*{
+
+    box-shadow:none !important;
+
+    filter:none !important;
+}
+
+/* HAPUS BACKGROUND PANEL */
+
+.form-box,
+.output-grid,
+.output-box,
+.main-stack{
+
+    background:transparent !important;
+
+    box-shadow:none !important;
+
+    border:none !important;
+}
+
+/* HAPUS BAYANGAN LABEL */
+
+.label,
+.spuit-label{
+
+    box-shadow:none !important;
+
+    filter:none !important;
+}
+
+/* =========================
+   RESPONSIVE MOBILE
+========================= */
+
+@media(max-width:900px){
+
+    .header-top{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .top-panel{
+
+        grid-template-columns:1fr;
+    }
+
+    .button-group{
+
+        grid-template-columns:1fr;
+    }
+
+    .aira-title{
+
+        font-size:48px;
+    }
+
+    .aira-desc{
+
+        font-size:16px;
+    }
+
+    .header-logo{
+
+        max-height:55px;
+    }
+
+    .sheet{
+
+        grid-template-columns:1fr;
+    }
+}
 </style>
 </head>
 <body>
 
 <div class="header-app">
 
-<img
-src="rs-unair-banner-1.png"
-class="logo-banner"
-alt="RS UNAIR">
+    <div class="header-top">
 
-    <h1 class="title-aira">
-    AIRA
-    <span>by Limbat</span>
-</h1>
+        <!-- LOGO KIRI -->
+        <div class="header-logo-box">
 
-    <p>
-    Airlangga Intelligent Rapid Assistant • Precision in High Alert Medication Calculator
-    </p>
+            <img
+            src="logo_1.png"
+            class="header-logo"
+            alt="Logo Kiri">
+
+        </div>
+
+        <!-- TENGAH -->
+        <div class="header-center">
+
+            <h1 class="aira-title">
+            AIRA
+            </h1>
+
+            <div class="aira-sub">
+            BY LIMBAT
+            </div>
+
+            <div class="aira-desc">
+            Airlangga Intelligent Rapid Assistant
+            </div>
+
+            <div class="aira-desc-small">
+            Precision in High Alert Medication Calculator
+            </div>
+
+        </div>
+
+        <!-- LOGO KANAN -->
+        <div class="header-logo-box">
+
+            <img
+            src="logo_2.png"
+            class="header-logo"
+            alt="Logo Kanan">
+
+        </div>
+
+    </div>
 
 </div>
 
 <div class="form-box">
 
-<div class="form-grid">
+<div class="main-stack">
 
-<input type="text" id="nama" placeholder="Nama pasien">
+<!-- PANEL ICU -->
+<div class="top-layout">
 
-<input type="text" id="mr" placeholder="No RM Pasien">
+    <!-- PANEL KIRI -->
+    <div class="left-panel">
 
-<input type="number" id="bb" placeholder="Berat badan (kg)">
+        <!-- DATA PASIEN -->
+        <div class="panel-card">
 
-<input type="text" id="giver" placeholder="Nama Giver">
+            <h2 class="panel-title">
+            🩺 DATA PASIEN
+            </h2>
 
-<input type="text" id="checker" placeholder="Nama Checker">
+            <!-- IDENTITAS -->
+            <div class="section-box">
 
-<select id="obat">
+                <div class="section-mini-title">
+                IDENTITAS PASIEN
+                </div>
+
+                <div class="form-grid-3">
+
+                    <input
+                    type="text"
+                    id="nama"
+                    placeholder="Nama Pasien">
+
+                    <input
+                    type="text"
+                    id="mr"
+                    placeholder="No RM">
+
+                    <select id="gender">
+
+                        <option value="pria">
+                        Laki-laki
+                        </option>
+
+                        <option value="wanita">
+                        Perempuan
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+<!-- BERAT BADAN MANUAL -->
+<div class="section-box">
+
+    <div class="section-mini-title">
+    BERAT BADAN
+    </div>
+
+    <div class="form-grid-2">
+
+        <input
+        type="number"
+        id="bb"
+        placeholder="Berat Badan (kg)">
+
+    </div>
+
+</div>
+
+        </div>
+
+    </div>
+
+    <!-- PANEL KANAN -->
+    <div class="right-panel">
+
+        <!-- PARAMETER INFUS -->
+        <div class="panel-card">
+
+            <h2 class="panel-title">
+            💉 OBAT
+            </h2>
+
+            <div class="section-box">
+
+                <div class="section-mini-title">
+                OBAT TITRASI
+                </div>
+
+                <div class="form-grid-2">
+
+<select
+id="obat"
+onchange="autoFillObat()">
 
     <option value="DILTIAZEM">
-        Diltiazem (Herbesser)
+    Diltiazem
     </option>
 
     <option value="NICARDIPINE_MURNI">
-        Nicardipine (Murni)
+    Nicardipine Murni
     </option>
 
     <option value="NICARDIPINE_OPLOS">
-        Nicardipine (Oplos)
+    Nicardipine Oplos
     </option>
 
     <option value="DOBUTAMIN">
-        Dobutamin
+    Dobutamin
     </option>
 
     <option value="NTG">
-        Nitroglicerin (NTG)
+    Nitroglycerin (NTG)
     </option>
 
     <option value="DOPAMIN">
-        Dopamin
+    Dopamin
     </option>
 
     <option value="DEX">
-        Dexmedetomidine (ICUNES)
+    Dexmedetomidine
     </option>
 
     <option value="NE">
-        NorEpinephrine (NE)
+    Norepinephrine (NE)
     </option>
 
     <option value="EPI">
-        Epinephrine
+    Epinephrine (EPI)
     </option>
 
     <option value="VASO">
-        Vasopressin
+    Vasopressin
     </option>
 
 </select>
 
-<button class="btn-add" onclick="tambahLabel()">
-Tambah Label
-</button>
+                    <input
+                    type="text"
+                    id="konsentrasi"
+                    placeholder="Dosis Sediaan"
+                    readonly>
 
-<button class="btn-print" onclick="window.print()">
-Print Semua
-</button>
+                    <input
+                    type="text"
+                    id="dosisPerMl"
+                    placeholder="Dosis per ml"
+                    readonly>
 
-<button class="btn-clear" onclick="clearLabel()">
-Clear Semua
-</button>
+                    <input
+                    type="text"
+                    id="checker"
+                    placeholder="Checker">
+
+                    <input
+                    type="text"
+                    id="giver"
+                    placeholder="Giver">
+
+                </div>
+
+            </div>
+        
+        </div>
+
+    </div>
+</div> <!-- top-layout -->
+<div class="full-button-bar">
+
+    <div class="button-group">
+
+            <button
+            class="btn-add"
+            onclick="tambahLabel()">
+
+            Tambah Label Titrasi
+
+            </button>
+
+            <button
+            class="btn-print"
+            onclick="tambahLabelSpuit()">
+
+            Tambah Label Spuit
+
+            </button>
+
+            <button
+            class="btn-clear"
+            onclick="clearLabel()">
+
+            Bersihkan
+
+            </button>
+
+            <button
+            class="btn-print"
+            onclick="window.print()">
+
+            Cetak Semua
+
+            </button>
+
+        </div>
+    </div>
 
 </div>
+<div class="output-grid">
 
-</div>
+    <!-- KITIR -->
+    <div class="output-box">
 
-<div class="sheet" id="sheet"></div>
+        <div class="output-title">
+        LABEL TITRASI
+        </div>
+
+        <div class="sheet" id="sheet"></div>
+
+    </div>
+
+    <!-- LABEL SPUIT -->
+    <div class="output-box">
+
+        <div class="output-title">
+        LABEL SPUIT
+        </div>
+
+        <div
+        class="spuit-sheet"
+        id="spuitSheet">
+        </div>
+
+    </div>
+
+</div> <!-- output-grid -->
+
+</div> <!-- main-stack -->
 
 <script>
 
-function tambahLabel(){
+/* =========================
+   AUTO FILL PARAMETER OBAT
+========================= */
 
+function autoFillObat(){
+
+    let obat =
+    document.getElementById('obat').value;
+
+    let konsentrasi =
+    document.getElementById('konsentrasi');
+
+    let dosisPerMlInput =
+    document.getElementById('dosisPerMl');
+
+    /* DILTIAZEM */
+    if(obat === "DILTIAZEM"){
+
+        konsentrasi.value =
+        "100 mg";
+
+        dosisPerMlInput.value =
+        "2 mg/ml";
+    }
+
+    /* NICARDIPINE MURNI */
+    if(obat === "NICARDIPINE_MURNI"){
+
+        konsentrasi.value =
+        "10 mg";
+
+        dosisPerMlInput.value =
+        "1 mg/ml";
+    }
+
+    /* NICARDIPINE OPLOS */
+    if(obat === "NICARDIPINE_OPLOS"){
+
+        konsentrasi.value =
+        "10 mg";
+
+        dosisPerMlInput.value =
+        "0.2 mg/ml";
+    }
+
+    /* DOBUTAMIN */
+    if(obat === "DOBUTAMIN"){
+
+        konsentrasi.value =
+        "250 mg";
+
+        dosisPerMlInput.value =
+        "5 mg/ml";
+    }
+
+    /* NTG */
+    if(obat === "NTG"){
+
+        konsentrasi.value =
+        "10 mg";
+
+        dosisPerMlInput.value =
+        "0.5 mg/ml";
+    }
+
+    /* DOPAMIN */
+    if(obat === "DOPAMIN"){
+
+        konsentrasi.value =
+        "200 mg";
+
+        dosisPerMlInput.value =
+        "5 mg/ml";
+    }
+
+    /* DEX */
+    if(obat === "DEX"){
+
+        konsentrasi.value =
+        "200 mcg";
+
+        dosisPerMlInput.value =
+        "4 mcg/ml";
+    }
+
+    /* NE */
+    if(obat === "NE"){
+
+        konsentrasi.value =
+        "8 mg";
+
+        dosisPerMlInput.value =
+        "0.2 mg/ml";
+    }
+
+    /* EPI */
+    if(obat === "EPI"){
+
+        konsentrasi.value =
+        "8 mg";
+
+        dosisPerMlInput.value =
+        "0.2 mg/ml";
+    }
+
+    /* VASO */
+    if(obat === "VASO"){
+
+        konsentrasi.value =
+        "20 iu";
+
+        dosisPerMlInput.value =
+        "1 iu/ml";
+    }
+}
+function tambahLabel(){
+    let obat = document.getElementById('obat').value;
+
+    let konsentrasi = document.getElementById('konsentrasi');
+
+    let dosisml =
+    document.getElementById('dosisPerMl');
+    
     let nama = document.getElementById('nama').value;
 
     let mr = document.getElementById('mr').value;
+
+    let gender =
+    document.getElementById('gender').value;
 
     let bb = parseFloat(document.getElementById('bb').value);
 
     let giver = document.getElementById('giver').value;
 
     let checker = document.getElementById('checker').value;
-
-    let obat = document.getElementById('obat').value;
 
     let namaObat = {
         DILTIAZEM: "DILTIAZEM",
@@ -1021,7 +1980,9 @@ tabelRate += `</table>`;
 
         <div class="info-grid">
 
-            <div>👤 ${nama}</div>
+            <div>
+            ${gender === "pria" ? "👨" : "👩"} ${nama}
+            </div>
             <div>🆔 ${mr}</div>
 
             <div>⚖️ ${bb} kg</div>
@@ -1051,14 +2012,274 @@ tabelRate += `</table>`;
     document.getElementById('sheet').innerHTML += html;
 
 }
+/* =========================
+   LABEL SPUIT
+========================= */
+
+function tambahLabelSpuit(){
+
+    let nama =
+    document.getElementById('nama').value;
+
+    let mr =
+    document.getElementById('mr').value;
+
+    let gender =
+    document.getElementById('gender').value;
+
+    let giver =
+    document.getElementById('giver').value;
+
+    let checker =
+    document.getElementById('checker').value;
+
+    let obat =
+    document.getElementById('obat').value;
+
+    let bb =
+    document.getElementById('bb').value;
+
+    let waktu =
+    new Date().toLocaleString('id-ID');
+
+let namaObat = {
+
+    DILTIAZEM: "DILTIAZEM",
+
+    NICARDIPINE_MURNI: "NICARDIPINE",
+
+    NICARDIPINE_OPLOS: "NICARDIPINE",
+
+    DOBUTAMIN: "DOBUTAMIN",
+
+    NTG: "NITROGLYCERIN",
+
+    DOPAMIN: "DOPAMIN",
+
+    DEX: "DEXMEDETOMIDINE",
+
+    NE: "NOREPINEPHRINE",
+
+    EPI: "EPINEPHRINE",
+
+    VASO: "VASOPRESSIN"
+
+}[obat];
+
+    let dosisSediaan = "-";
+    let dosisPerMl = "-";
+    let pelarut = "-";
+
+ if(obat === "DILTIAZEM"){
+
+    warna = "#fed7aa";
+
+    dosisPerMl = "PZ/D5 - 50 ml";
+
+    dosisSediaan = "100 mg - 2 mg/ml";
+}
+    
+if(obat === "NICARDIPINE_MURNI"){
+
+    warna = "#fde047";
+
+    satuan = "mg/jam";
+
+    dosisPerMl = "MURNI";
+
+    dosisSediaan = "10 mg - 1 mg/ml";
+}
+
+if(obat === "NICARDIPINE_OPLOS"){
+
+    warna = "#fef08a";
+
+    dosisPerMl = "PZ/D5 - 50 ml";
+
+    dosisSediaan = "10 mg - 0,2 mg/ml";
+}
+
+if(obat === "DOBUTAMIN"){
+    warna = "#fecaca";
+    dosisPerMl = "D5 - 50 ml";
+    dosisSediaan = "250 mg - 5 mg/ml";
+}
+
+if(obat === "NE"){
+    warna = "#fda4af";
+    dosisPerMl = "PZ/D5 - 40 ml";
+    dosisSediaan = "8 mg - 0,2 mg/ml";
+}
+if(obat === "EPI"){
+    warna = "#fda4af";
+    dosisPerMl = "PZ/D5 - 40 ml";
+    dosisSediaan = "8 mg - 0,2 mg/ml";
+}
+if(obat === "VASO"){
+    warna = "#ddd6fe";
+    dosisPerMl = "PZ/D5 - 20 ml";
+    dosisSediaan = "20 iu - 1 iu/ml";
+}
+if(obat === "NTG"){
+
+    warna = "#fecaca";
+
+    dosisPerMl = "PZ/D5 - 50 ml";
+
+    dosisSediaan = "10 mg - 0.5 mg/ml";
+}
+
+if(obat === "DOPAMIN"){
+
+    warna = "#ddd6fe";
+
+    dosisPerMl = "PZ/D5 - 40 ml";
+
+    dosisSediaan = "200 mg - 5 mg/ml";
+}
+
+if(obat === "DEX"){
+
+    warna = "#a7f3d0";
+
+    dosisPerMl = "PZ/D5 - 50 ml";
+
+    dosisSediaan = "200 mcg - 4 mcg/ml";
+}
+
+    let html = `
+
+    <div class="spuit-label">
+
+        <div class="high-alert">
+        HIGH ALERT
+        </div>
+
+        <div class="spuit-title">
+        ${namaObat}
+        </div>
+
+        <div class="spuit-info-grid">
+
+            <div class="spuit-info-item info-patient">
+
+                <span class="spuit-info-icon">
+                ${gender === "pria" ? "👨" : "👩"}
+                </span>
+
+                <span class="spuit-info-text">
+                ${nama}
+                </span>
+
+            </div>
+
+            <div class="spuit-info-item info-rm">
+
+                <span class="spuit-info-icon">
+            🆔
+                </span>
+
+                <span class="spuit-info-text">
+                ${mr}
+                </span>
+
+            </div>
+
+            <div class="spuit-info-item info-bb">
+
+                <span class="spuit-info-icon">
+                ⚖️
+                </span>
+
+                <span class="spuit-info-text">
+                ${bb} kg
+                </span>
+
+            </div>
+
+            <div class="spuit-info-item info-giver">
+
+                <span class="spuit-info-icon">
+                👨‍⚕️
+                </span>
+
+                <span class="spuit-info-text">
+                ${giver}
+                </span>
+
+            </div>
+
+            <div class="spuit-info-item info-obat">
+
+                <span class="spuit-info-icon">
+                💊
+                </span>
+
+                <span class="spuit-info-text">
+                ${dosisSediaan}
+                </span>
+
+            </div>
+
+            <div class="spuit-info-item info-checker">
+
+                <span class="spuit-info-icon">
+                ✅
+                </span>
+
+                <span class="spuit-info-text">
+                ${checker}
+                </span>
+
+            </div>
+
+            <div class="spuit-info-item info-pelarut">
+
+                <span class="spuit-info-icon">
+                💧
+                </span>
+
+                <span class="spuit-info-text">
+                ${dosisPerMl}
+                </span>
+
+            </div>
+
+            <div class="spuit-info-item info-time">
+
+                <span class="spuit-info-icon">
+                🕒
+                </span>
+
+                <span class="spuit-info-text">
+                ${waktu}
+                </span>
+
+            </div>
+
+        </div>
+
+</div>
+
+`;
+
+
+    document.getElementById(
+        'spuitSheet'
+    ).innerHTML += html;
+}
 
 function clearLabel(){
 
     if(confirm('Hapus semua label?')){
 
         document.getElementById('sheet').innerHTML = '';
+
+        document.getElementById('spuitSheet').innerHTML = '';
     }
 }
+
+autoFillObat();
 
 </script>
 
