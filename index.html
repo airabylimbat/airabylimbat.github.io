@@ -1678,17 +1678,19 @@ function tambahLabel(){
     let checker = document.getElementById('checker').value;
 
 let namaObat = {
+
     DILTIAZEM: "DILTIAZEM",
     NICARDIPINE_MURNI: "NICARDIPINE",
     NICARDIPINE_OPLOS: "NICARDIPINE",
     DOBUTAMIN: "DOBUTAMIN",
-    NTG: "NITROGLICERIN",
+    NTG: "NITROGLYCERIN",
     DOPAMIN: "DOPAMIN",
     DEX: "DEXMEDETOMIDINE",
     NE: "NOREPINEPHRINE",
     EPI: "EPINEPHRINE",
     VASO: "VASOPRESSIN",
     HEPARIN: "HEPARIN"
+
 }[obat];
 
     if(!nama || !bb){
@@ -1929,7 +1931,7 @@ if(obat === "HEPARIN"){
 
     warna = "#fca5a5";
 
-    satuan = "unit/kgBB/jam";
+    labelDosis = "unit/kgBB/jam";
 
     dosisPerMl = "100 unit/ml";
 
