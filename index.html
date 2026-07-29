@@ -1422,6 +1422,10 @@ onchange="autoFillObat()">
     Vasopressin
     </option>
 
+    <option value="HEPARIN">
+    Heparin
+    </option>
+
 </select>
 
                     <input
@@ -1641,6 +1645,16 @@ function autoFillObat(){
         dosisPerMlInput.value =
         "1 iu/ml";
     }
+    
+    /* HEPARIN */
+    if(obat === "HEPARIN"){
+
+        konsentrasi.value =
+        "5000 unit / 50 ml";
+
+        dosisPerMlInput.value =
+        "100 unit/ml";
+    }
 }
 function tambahLabel(){
     let obat = document.getElementById('obat').value;
@@ -1663,18 +1677,19 @@ function tambahLabel(){
 
     let checker = document.getElementById('checker').value;
 
-    let namaObat = {
-        DILTIAZEM: "DILTIAZEM",
-        NICARDIPINE_MURNI: "NICARDIPINE",
-        NICARDIPINE_OPLOS: "NICARDIPINE",
-        DOBUTAMIN: "DOBUTAMIN",
-        NTG: "NITROGLICERIN",
-        DOPAMIN: "DOPAMIN",
-        DEX: "DEXMEDETOMIDINE",
-        NE: "NOREPINEPHRINE",
-        EPI: "EPINEPHRINE",
-        VASO: "VASOPRESSIN"
-    }[obat];
+let namaObat = {
+    DILTIAZEM: "DILTIAZEM",
+    NICARDIPINE_MURNI: "NICARDIPINE",
+    NICARDIPINE_OPLOS: "NICARDIPINE",
+    DOBUTAMIN: "DOBUTAMIN",
+    NTG: "NITROGLICERIN",
+    DOPAMIN: "DOPAMIN",
+    DEX: "DEXMEDETOMIDINE",
+    NE: "NOREPINEPHRINE",
+    EPI: "EPINEPHRINE",
+    VASO: "VASOPRESSIN",
+    HEPARIN: "HEPARIN"
+}[obat];
 
     if(!nama || !bb){
 
@@ -1907,6 +1922,29 @@ if(obat === "EPI"){
 }
 
 /* ===================================
+   HEPARIN
+=================================== */
+
+if(obat === "HEPARIN"){
+
+    warna = "#fca5a5";
+
+    satuan = "unit/kgBB/jam";
+
+    dosisPerMl = "100 unit/ml";
+
+    dosisSediaan = "100 unit - 1 ml";
+
+    // pilihan dosis 5 - 30 unit/kgBB/jam
+    for(let i=5;i<=30;i++){
+
+        r.push(
+            ((bb * i) / 100).toFixed(2)
+        );
+    }
+} 
+    
+/* ===================================
    VASO
 =================================== */
 
@@ -1992,7 +2030,15 @@ if(obat === "VASO"){
         0.1,0.2,0.3,0.4,0.5
     ];
 }
+/* HEPARIN */
+if(obat === "HEPARIN"){
 
+    dosisList = [];
+
+    for(let i = 5; i <= 30; i++){
+        dosisList.push(i);
+    }
+}
 let tabelRate = `
 
 <table class="rate-table">
@@ -2123,6 +2169,8 @@ let namaObat = {
 
     VASO: "VASOPRESSIN"
 
+    HEPARIN: "HEPARIN"
+
 }[obat];
 
     let dosisSediaan = "-";
@@ -2206,6 +2254,14 @@ if(obat === "DEX"){
     dosisSediaan = "200 mcg - 4 mcg/ml";
 }
 
+if(obat === "HEPARIN"){
+
+    warna = "#fca5a5";
+
+    dosisPerMl = "PZ/D5 - 50 ml";
+
+    dosisSediaan = "5000 IU-100 IU/ml";
+}    
     let html = `
 
     <div class="spuit-label">
