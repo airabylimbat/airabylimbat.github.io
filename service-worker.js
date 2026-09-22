@@ -1,12 +1,13 @@
 const CACHE_NAME = "aira-cache-v1";
 
 const APP_SHELL = [
-    "./",
-    "./index.html",
-    "./manifest.json",
-    "./qrcode.min.js",
-    "./logo_1.png",
-    "./logo_2.png"
+  "./",
+  "./index.html",
+  "./manifest.json",
+  "./qrcode.min.js",
+  "./logo_1.png",
+  "./logo_2.png",
+  "./aira-icon.png"
 ];
 
 self.addEventListener("install", event => {
