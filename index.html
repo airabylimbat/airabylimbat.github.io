@@ -1948,14 +1948,20 @@ if(obat === "HEPARIN"){
 
     dosisSediaan = "100 unit - 1 ml";
 
-    // pilihan dosis 5 - 30 unit/kgBB/jam
-    for(let i=5;i<=30;i++){
+    // dosis: 1, 5–15 unit/kgBB/jam
+    let dosisHeparin = [
+        1,5,6,7,8,9,
+        10,11,12,13,14,15
+    ];
+
+    dosisHeparin.forEach(d => {
 
         r.push(
-            ((bb * i) / 100).toFixed(2)
+            ((bb * d) / 100).toFixed(2)
         );
-    }
-} 
+
+    });
+}
     
 /* ===================================
    VASO
@@ -2046,11 +2052,10 @@ if(obat === "VASO"){
 /* HEPARIN */
 if(obat === "HEPARIN"){
 
-    dosisList = [];
-
-    for(let i = 5; i <= 30; i++){
-        dosisList.push(i);
-    }
+    dosisList = [
+        1,5,6,7,8,9,
+        10,11,12,13,14,15
+    ];
 }
 let tabelRate = `
 
