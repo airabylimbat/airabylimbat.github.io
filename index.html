@@ -5,7 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>AIRA by Limbat</title>
+<link rel="manifest" href="manifest.json">
 
+<meta name="theme-color" content="#0f766e">
+
+<meta name="mobile-web-app-capable"
+      content="yes">
+
+<meta name="apple-mobile-web-app-capable"
+      content="yes">
+
+<meta name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent">
 <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
 
 <style>
@@ -2403,6 +2414,37 @@ autoFillObat();
 <div class="copyright">
     © 2026 AIRA by Limbat
 </div>
+<script>
 
+if ("serviceWorker" in navigator) {
+
+    window.addEventListener("load", function () {
+
+        navigator.serviceWorker
+            .register("./service-worker.js")
+
+            .then(function (registration) {
+
+                console.log(
+                    "AIRA Offline aktif:",
+                    registration.scope
+                );
+
+            })
+
+            .catch(function (error) {
+
+                console.error(
+                    "AIRA Offline gagal:",
+                    error
+                );
+
+            });
+
+    });
+
+}
+
+</script>
 </body>
 </html>
